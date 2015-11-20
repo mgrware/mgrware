@@ -1,0 +1,48 @@
+   <header id="top-bar" class="navbar-fixed-top animated-header">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <!-- /responsive nav button -->
+                    
+                    <!-- logo -->
+                    <div class="navbar-brand">
+                        <a href="/" >
+                        Hello
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+                <!-- main menu -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <div class="main-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <%= link_to "Home", root_path %> 
+                            </li>
+                            <li><%= link_to "About", about_path %></li>
+                            <li><%= link_to "Service", services_path %></li>
+                            <li><%= link_to "Gallery", galleries_path %></li>
+                            <li><%= link_to "Blog", blogs_path %></li>
+                            <% if !current_user %>
+                            <li>
+<%= link_to 'Sign In', new_session_path %>
+</li>
+<% else %>
+<li><%= link_to 'Dashboard', dashboard_index_path, :target => '_blank' %></li>
+<li>
+<%= link_to 'Sign Out', session_path(current_user.id), method: "DELETE" %>
+</li>
+<% end %>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /main nav -->
+            </div>
+        </header>
+        

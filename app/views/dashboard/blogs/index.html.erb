@@ -1,0 +1,61 @@
+
+      <div class="content-wrapper">
+    <section class="content">
+          <div class="row">
+            <div class="col-xs-12"> 
+             <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Data Table With Full Features</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <table id="test" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Author</th>
+                        <th>Last Update</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <% @blogs.each do |blog| %>
+                      <tr>
+                        <td><%= blog.title %></td>
+                        <td><%= blog.category %></td>
+                        <td> Gilang</td>
+                        <td><%= blog.updated_at.localtime.strftime("%d %b %Y %I:%M %p")%></td>
+                        <td><%= link_to "Edit", dashboard_blogs_edit_path(blog.id) %> | <%= link_to "Delete", dashboard_blogs_destroy_path(blog.id), :method => 'delete', data: {confirm: 'Delete this data ?'} %></td>
+                      </tr>
+                      <%end%>       
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Author</th>
+                        <th>Last Update</th>
+                        <th>Action</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </section><!-- /.content -->
+</div>
+
+  <script>
+      $(function () {
+        $("#test").DataTable();
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": true,
+          "ordering": true,
+          "info": true,
+          "autoWidth": true
+        });
+      });
+    </script>

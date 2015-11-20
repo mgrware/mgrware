@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MGRware</title>
+    <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <script src="https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body class="hold-transition skin-blue">
+ 	<div class="wrapper">
+ 	<%= render 'shared/header_dashboard' %>
+ 	<%= render 'shared/dashboard_sidebar_nav' %>
+    <%= yield %>
+	<%= render 'shared/footer_dashboard' %>
+	</div>
+
+  <script type="text/javascript">  $('.selectpicker').selectpicker({
+      style: 'btn-info',
+      size: 4
+  });</script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+ ================================================== 
+            Global Page Section Start
+        ================================================== -->
+        <section class="global-page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2>New User</h2>
+                            <ol class="breadcrumb">
+                                <li>
+                                    <a href="/">
+                                        <i class="ion-ios-home"></i>
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="active">New User</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section><!--/#page-header-->
+
+
+        <!-- 
+        ================================================== 
+            Contact Section Start
+        ================================================== -->
+        <section id="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="block">
+                            <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Become a New User</h2>
+                            <p class="subtitle-des wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".5s">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, ea!
+                                 consectetur adipisicing elit. Dolore, ea!
+                            </p>
+                            <div class="contact-form">
+                          <%= form_for (@user), :id => 'contact-form', :role => 'form' do |f| %>
+                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
+<%= f.text_field :username, :placeholder => 'Your Username', :class => 'form-control' %>
+<%= @user.errors[:username].first unless @user.errors[:username].blank? %>
+</div>
+<div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
+<%= f.text_field :email, :placeholder => 'Your Email', :class => 'form-control' %>
+<%= @user.errors[:email].first unless @user.errors[:email].blank? %>
+</div>
+<div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
+<%= f.password_field :password, :placeholder => 'Your Password', :class => 'form-control' %>
+<%= @user.errors[:password].first unless @user.errors[:password].blank? %>
+</div>
+<div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
+<%= f.password_field :password_confirmation, :placeholder => 'Confirm Password', :class => 'form-control' %>
+<%= @user.errors[:password_confirmation].first unless @user.errors[:password_confirmation].blank? %>
+</div>
+<div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
+<%= f.label :humanizer_answer, @user.humanizer_question %>
+<%= f.text_field :humanizer_answer, :placeholder => 'Your Answer', :class => 'form-control' %>
+<%= f.hidden_field :humanizer_question_id %>
+</div>
+<div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.6s">
+<%= f.submit  :class => "btn btn-default btn-send" %>
+</div>
+<% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row address-details">
+                    <div class="col-md-3">
+                        <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
+                            <i class="ion-ios-location-outline"></i>
+                            <h5>125 , Kings Street,Melbourne <br>United Kingdom,600562</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
+                            <i class="ion-ios-location-outline"></i>
+                            <h5>125 , Kings Street,Melbourne <br>United Kingdom,600562</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
+                            <i class="ion-ios-email-outline"></i>
+                            <p>support@themefisher.com<br>support@themefisher.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
+                            <i class="ion-ios-telephone-outline"></i>
+                            <p>+07 052 245 022<br>+07 999 999 999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- 
+        ================================================== 
+            Call To Action Section Start
+        ================================================== -->
+        <section id="call-to-action">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="block">
+                            <h2 class="title wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">INTERESTED IN WORKING TOGETHER? ?</h1>
+                            <p class="wow fadeInDown" data-wow-delay=".5s" data-wow-duration="500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,</br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium.</p>
+                            <a href="contact.html" class="btn btn-default btn-contact wow fadeInDown" data-wow-delay=".7s" data-wow-duration="500ms">Contact With Me</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>

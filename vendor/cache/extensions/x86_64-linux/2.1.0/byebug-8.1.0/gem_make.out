@@ -1,0 +1,16 @@
+/home/ghawk/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20151111-7603-zu8cwb.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling breakpoint.c
+compiling locker.c
+compiling byebug.c
+compiling context.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20151111-7603-ni5c9v/byebug
+installing default byebug libraries
