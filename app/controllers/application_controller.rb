@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
 
         def profile
 
-                @profile = Profile.find_by_user_id(current_user.id)
+                @profile = Profile.find_by_id(1)
         end
 
 

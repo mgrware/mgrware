@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  resources :comments
 
   get "signup" => "users#new", :as => "sign_up"
     resources :users

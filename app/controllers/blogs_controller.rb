@@ -37,6 +37,14 @@ class BlogsController < ApplicationController
   def show
 
        @blog = Blog.find_by_id(params[:id])
+        @comments = @blog.comments.order("created_at asc").paginate(:page => params[:page], :per_page => 6)
+        @comment = Comment.new
+
+      respond_to do |format|
+      format.html
+      format.js # add this line for your js template
+    end
+
    end
 
 end

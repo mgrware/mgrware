@@ -1,0 +1,19 @@
+
+<% @comments.each do |comment| %>
+                                <div class="media ">
+                                    <a href="" class="pull-left">
+                                    <!--     <img alt="" src="images/avater-2.jpg" class="media-object">
+                                     --></a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">
+<%= comment.user.try(:username) %></h4>
+                                        <p class="text-muted">
+                                            <%= comment.created_at.localtime.strftime("%d %b %Y %I:%M %p")%>
+                                        </p>
+                                        <p>
+        <%= comment.content %>
+                                        </p>
+                                        <a href="">Reply</a>
+                                    </div>
+                                </div>
+                           <% end %>

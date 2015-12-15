@@ -1,0 +1,13 @@
+/home/ghawk/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20151120-12327-x3hfdy.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20151120-12327-15gctmi
+installing default fastfilereaderext libraries

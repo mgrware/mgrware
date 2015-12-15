@@ -38,6 +38,12 @@ source 'https://rails-assets.org/' do
   gem 'rails-assets-adminlte'
 end
 
+gem 'jquery-turbolinks'
+
+ gem 'rails_12factor', group: "production"
+
+ gem 'thin'
+
 gem 'will_paginate'
 
 gem 'ckeditor', github: 'galetahub/ckeditor'
@@ -50,6 +56,7 @@ gem 'will_paginate-bootstrap'
 
 gem 'humanizer'
 
+gem 'rmagick', :require => 'RMagick'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
